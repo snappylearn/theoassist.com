@@ -1,0 +1,33 @@
+Uncaught (in promise) TypeError: Failed to execute 'fetch' on 'Window': '/api/artifacts' is not a valid HTTP method.
+    at window.fetch (Network.js:219:37)
+    at apiRequest (4fcc8cbe-f3d7-4fb2-a52c-0419ef0e3547-00-2pf6g4ynxfbwp.janeway.replit.dev/src/lib/queryClient.ts:18:21)Understand this error
+Console.js:61 Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+Mt.forEach.n.<computed> @ Console.js:61Understand this warning
+4fcc8cbe-f3d7-4fb2-a52c-0419ef0e3547-00-2pf6g4ynxfbwp.janeway.replit.dev/api/projects:1  Failed to load resource: the server responded with a status of 401 (Unauthorized)Understand this error
+stallwart.build.js:1 stallwart: failed ping 1
+  POST https://4fcc8cbe-f3d7-4fb2-a52c-0419ef0e3547-00-2pf6g4ynxfbwp.janeway.replit.dev/api/projects 401 (Unauthorized)
+window.fetch @ Network.js:219
+mutationFn @ 4fcc8cbe-f3d7-4fb2-a…ges/projects.tsx:42
+fn @ @tanstack_react-query.js:1189
+run @ @tanstack_react-query.js:494
+start @ @tanstack_react-query.js:536
+execute @ @tanstack_react-query.js:1225
+await in execute
+mutate @ @tanstack_react-query.js:2630
+(anonymous) @ @tanstack_react-query.js:3295
+handleCreateProject @ 4fcc8cbe-f3d7-4fb2-a…ges/projects.tsx:94
+callCallback2 @ chunk-UPELNCPK.js:3674
+invokeGuardedCallbackDev @ chunk-UPELNCPK.js:3699
+invokeGuardedCallback @ chunk-UPELNCPK.js:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-UPELNCPK.js:3736
+executeDispatch @ chunk-UPELNCPK.js:7014
+processDispatchQueueItemsInOrder @ chunk-UPELNCPK.js:7034
+processDispatchQueue @ chunk-UPELNCPK.js:7043
+dispatchEventsForPlugins @ chunk-UPELNCPK.js:7051
+(anonymous) @ chunk-UPELNCPK.js:7174
+batchedUpdates$1 @ chunk-UPELNCPK.js:18913
+batchedUpdates @ chunk-UPELNCPK.js:3579
+dispatchEventForPluginEventSystem @ chunk-UPELNCPK.js:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-UPELNCPK.js:5478
+dispatchEvent @ chunk-UPELNCPK.js:5472
+dispatchDiscreteEvent @ chunk-UPELNCPK.js:5449Understand this error

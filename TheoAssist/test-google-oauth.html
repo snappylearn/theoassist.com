@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test Google OAuth</title>
+        <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    </head>
+    <body>
+        <h1>Supabase Google OAuth Test</h1>
+        <button onclick="testGoogleAuth()">Test Google OAuth</button>
+        <div id="result"></div>
+
+        <script>
+            // Initialize Supabase with your project details
+            const supabaseUrl = "https://hrtdbvwocrlqkmxttqox.supabase.co";
+            const supabaseKey =
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhydGRidndvY3JscWtteHR0cW94Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE1NjA2NDEsImV4cCI6MjA2NzEzNjY0MX0.Qg5KMqCK8dL2jCXO-kXC_1O0mVPwNsVmUq7rGWGRgVs";
+
+            const supabase = window.supabase.createClient(
+                supabaseUrl,
+                supabaseKey,
+            );
+
+            async function testGoogleAuth() {
+                console.log("Testing Google OAuth...");
+                document.getElementById("result").innerHTML = "Testing...";
+
+                try {
+                    const { data, error } = await supabase.auth.signInWithOAuth(
+                        {
+                            provider: "google",
+                            options: {
+                                redirectTo:
+                                    "https://theo-assist.replit.app/auth/callback",
+                            },
+                        },
+                    );
+
+                    console.log("OAuth result:", { data, error });
+
+                    if (error) {
+                        document.getElementById("result").innerHTML = `
+                        <h3>Error:</h3>
+                        <pre>${JSON.stringify(error, null, 2)}</pre>
+                    `;
+                    } else {
+                        document.getElementById("result").innerHTML = `
+                        <h3>Success:</h3>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                    }
+                } catch (err) {
+                    console.error("Exception:", err);
+                    document.getElementById("result").innerHTML = `
+                    <h3>Exception:</h3>
+                    <pre>${err.message}</pre>
+                `;
+                }
+            }
+        </script>
+    </body>
+</html>
